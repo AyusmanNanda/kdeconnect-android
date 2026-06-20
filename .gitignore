@@ -15,4 +15,3 @@ local.properties
 GPUCache/
 /release/
 /.kotlin/
-gradle/gradle-daemon-jvm.properties

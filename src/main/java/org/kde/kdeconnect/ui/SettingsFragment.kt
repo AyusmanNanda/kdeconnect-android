@@ -68,7 +68,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
             devicesByIpPref(context),
             bluetoothSupportPref(context),
             exportLogsPref(context),
-            autoStartOnBootPref(context),
             moreSettingsPref(context),
         ).forEach(screen::addPreference)
 
@@ -221,13 +220,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
             }
             true
         }
-    }
-
-    private fun autoStartOnBootPref(context: Context) = SwitchPreference(context).apply {
-        key = "auto_start_on_boot"
-        setDefaultValue(true)
-        setTitle(R.string.auto_start_on_boot_title)
-        setSummary(R.string.auto_start_on_boot_summary)
     }
 
     private fun exportLogsPref(context: Context) = Preference(context).apply {
